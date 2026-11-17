@@ -6,7 +6,42 @@ custom Voxblox and `voxblox_ros` changes required by the Evidential Mapping
 pipeline. The initial public snapshot was imported from commit
 `15e8cbf9a4c4e7d44779696172d17ccbbcdeb7ee`.
 
+## What is new in this fork
+
+Relative to upstream [Voxblox](https://github.com/ethz-asl/voxblox), this fork
+adds the mapping support required by EvidKimera, including:
+
+- semantic and depth-uncertainty fields in point-cloud and voxel data types;
+- ROS conversions and `voxblox_ros` interfaces for those extended data;
+- evidential semantic TSDF integration hooks and implementations;
+- uncertainty- and viewpoint-aware observation weighting; and
+- voxel semantic labels, posterior uncertainty state, and mesh-message support.
+
+The TSDF/ESDF implementation and ROS package structure remain derived from
+upstream Voxblox. The upstream authors, license, and paper are retained below.
+
 The upstream BSD license is preserved in [LICENSE](LICENSE).
+
+When using this fork as part of Evidential Mapping, please cite both the
+EvidMTL paper and the original Voxblox paper:
+
+```bibtex
+@inproceedings{menon2025evidmtl,
+  author={Menon, Rohit and Dengler, Nils and Pan, Sicong and Chenchani, Gokul Krishna and Bennewitz, Maren},
+  title={EvidMTL: Evidential Multi-Task Learning for Uncertainty-Aware Semantic Surface Mapping from Monocular RGB Images},
+  booktitle={2025 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)},
+  year={2025},
+  doi={10.1109/IROS60139.2025.11247528}
+}
+
+@inproceedings{oleynikova2017voxblox,
+  author={Oleynikova, Helen and Taylor, Zachary and Fehr, Marius and Nieto, Juan and Siegwart, Roland},
+  title={Voxblox: Incremental 3D Euclidean Signed Distance Fields for On-Board MAV Planning},
+  booktitle={2017 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)},
+  year={2017},
+  doi={10.1109/IROS.2017.8202315}
+}
+```
 
 ## Voxblox
 
